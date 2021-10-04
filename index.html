@@ -16,26 +16,6 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
          s.parentNode.insertBefore(wzrk, s);
   })();
   
-          function onUserLogin()
-          {
-              var name=document.getElementById("name").value;
-              var email=document.getElementById("email").value;
-              var phoneno=document.getElementById("phone").value;
-              var Dateofbirth=document.getElementById("date").value;
-              var gender=document.getElementById("Gender").value;
-
-              clevertap.onUserLogin.push({
-                  "Site": {
-                  "Name": name,   
-                  "Email": email,          
-                  "Phone": phoneno,           // Phone (with the country code
-                  "DOB": new Date(Dateofbirth),                 // Date of Birth. Date object   
-                  "gender": gender  
-                    }
-                      });
-
-                  console.log("profile created")
-            }
            function askForPush(){
 
      clevertap.notifications.push({
@@ -66,6 +46,29 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
         </div>
 
   <button onclick="onUserLogin()">login</button>
+         <script>
+          function onUserLogin()
+          {
+              var name=document.getElementById("name").value;
+              var email=document.getElementById("email").value;
+              var phoneno=document.getElementById("phone").value;
+              var Dateofbirth=document.getElementById("date").value;
+              var gender=document.getElementById("Gender").value;
+
+              clevertap.onUserLogin.push({
+                  "Site": {
+                  "Name": name,   
+                  "Email": email,          
+                  "Phone": phoneno,           // Phone (with the country code
+                  "DOB": new Date(Dateofbirth),                 // Date of Birth. Date object   
+                  "gender": gender  
+                    }
+                      });
+
+                  console.log("profile created")
+            }
+                       </script>
+         
   <button onclick="profilePush()">Profile push</button>
  <script>
    function profilePush(){
