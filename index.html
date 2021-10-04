@@ -2,7 +2,8 @@
 <html> 
 <head>
 <body>
-<script type="text/javascript">
+<script 
+     type="text/javascript">
      var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
 clevertap.account.push({"id": "848-6W8-9R6Z"});
 clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
@@ -15,23 +16,11 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
          var s = document.getElementsByTagName('script')[0];
          s.parentNode.insertBefore(wzrk, s);
   })();
-  
-           function askForPush(){
-
-     clevertap.notifications.push({
-    "titleText":"Do you want to subscribe to web push?",
-    "bodyText":"Get updates",
-    "rejectButtonText":'No',
-    "okButtonText":'Yes'});
-
-     console.log("Ok button created")
-      }
-
+ 
 
 </script>
 
     <center> <h1> Login Form </h1> </center>
-    <form>
         <div class="container"> 
             <label>Username : </label> 
             <input type="identity" placeholder="Enter Identity" name="identity" required>
@@ -94,7 +83,19 @@ console.log("profile successfully pushed")
 </script>          
 
 <button onclick="askForPush()">Submit</button>
-</form>
+     <script>
+               
+           function askForPush(){
+
+     clevertap.notifications.push({
+    "titleText":"Do you want to subscribe to web push?",
+    "bodyText":"Get updates",
+    "rejectButtonText":'No',
+    "okButtonText":'Yes'});
+
+     console.log("Ok button created")
+      }
+  </script>
 </body>
 </head>
 </html>
