@@ -16,28 +16,6 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
          s.parentNode.insertBefore(wzrk, s);
   })();
   
-
-              function profilePush(){
-  var name=document.getElementById("name").value;
-  var email=document.getElementById("email").value;
-  var phoneno=document.getElementById("phone").value;
-  var Dateofbirth=document.getElementById("date").value;
-  var gender=document.getElementById("Gender").value;
-
-  clevertap.profile.push({
-   "Site": {
-   "Name":   name ,         // use the Name variable
-   "Email":  email,         // Email address of the user
-   "Phone": phoneno,           // Phone (with the country code
-   "DOB": new Date(Dateofbirth),  // Date of Birth. Date object   
-   "gender": gender  
-     }
-        });
-
-console.log("profile successfully pushed")
-
-}  
-
           function onUserLogin()
           {
               var name=document.getElementById("name").value;
@@ -87,9 +65,30 @@ console.log("profile successfully pushed")
             <input type="Gender" placeholder="Enter Gender" name="Gender" required>
         </div>
 
-      <button onclick="onUserLogin()">login</button>
+  <button onclick="onUserLogin()">login</button>
+  <button onclick="profilePush()">Profile push</button>
+ <script>
+   function profilePush(){
+  var name=document.getElementById("name").value;
+  var email=document.getElementById("email").value;
+  var phoneno=document.getElementById("phone").value;
+  var Dateofbirth=document.getElementById("date").value;
+  var gender=document.getElementById("Gender").value;
 
-            <button onclick="profilePush()">Profile push</button>
+  clevertap.profile.push({
+   "Site": {
+   "Name":   name ,         // use the Name variable
+   "Email":  email,         // Email address of the user
+   "Phone": phoneno,           // Phone (with the country code
+   "DOB": new Date(Dateofbirth),  // Date of Birth. Date object   
+   "gender": gender  
+     }
+        });
+
+console.log("profile successfully pushed")
+
+}
+</script>          
 
 <button onclick="askForPush()">Submit</button>
 </form>
