@@ -22,16 +22,11 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
      <body>
     <center> <h1> Login Form </h1> </center>
         <div class="container"> 
-            <label>Username : </label> 
-            <input type="identity" placeholder="Enter Identity" name="identity" required>
-            <label>Mobile No. : </label> 
-            <input type="mobileNo" placeholder="Enter Mobile No" name="mobileNo" required>
-            <label>E-mail id : </label> 
-            <input type="email" placeholder="Enter E-mail id" name="email" required>
-            <label>Date of birth : </label> 
-            <input type="Date" placeholder="Enter Date of birth" name="date" required>
-            <label>Gender : </label> 
-            <input type="Gender" placeholder="Enter Gender" name="Gender" required>
+            <input type="identity" id ="name" placeholder="Enter Identity" name="" required>
+            <input type="mobileNo" id= "phone" placeholder="Enter Mobile No" name="" required>
+            <input type="email" id= "email" placeholder="Enter E-mail id" name="" required>
+            <input type="Date" id= "date" placeholder="Enter Date of birth" name="" required>
+            <input type="Gender" id= "Gender" placeholder="Enter Gender" name="" required>
         </div>
 
   <button onclick="onUserLogin()">login</button>
