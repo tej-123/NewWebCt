@@ -1,7 +1,6 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-<body>
 <script 
      type="text/javascript">
      var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
@@ -17,9 +16,10 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
          s.parentNode.insertBefore(wzrk, s);
   })();
  
-
+     
 </script>
-
+  </head>
+     <body>
     <center> <h1> Login Form </h1> </center>
         <div class="container"> 
             <label>Username : </label> 
@@ -35,7 +35,7 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
         </div>
 
   <button onclick="onUserLogin()">login</button>
-         <script>
+         <script type = "text/javascript">
           function onUserLogin()
           {
               var name=document.getElementById("name").value;
@@ -49,7 +49,7 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
                   "Name": name,   
                   "Email": email,          
                   "Phone": phoneno,           // Phone (with the country code
-                  "DOB": new Date(Dateofbirth),                 // Date of Birth. Date object   
+                  "DOB": new Date(),                 // Date of Birth. Date object   
                   "gender": gender  
                     }
                       });
@@ -59,7 +59,7 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
                        </script>
          
   <button onclick="profilePush()">Profile push</button>
- <script>
+ <script type = "text/javascript">
    function profilePush(){
   var name=document.getElementById("name").value;
   var email=document.getElementById("email").value;
@@ -83,7 +83,7 @@ console.log("profile successfully pushed");
 </script>          
 
 <button onclick="askForPush()">Submit</button>
-     <script>
+     <script type = "text/javascript">
                
            function askForPush(){
 
@@ -97,5 +97,4 @@ console.log("profile successfully pushed");
       }
   </script>
 </body>
-</head>
 </html>
